@@ -19,7 +19,6 @@ while again == "yes":
             print ("Did not understand command, try again.")
         else:
             onoff = "off"
-            print ("Goodbye!")
     if modechoice == "q":
         again = "no"
     elif modechoice == "e":
@@ -46,8 +45,14 @@ while again == "yes":
         for i in messagelist:
             for b in listkey:
                 i = int(i) + int(b)
-        print 
+        for j in messagelist:
+            if j < len(associations):
+                j = associations[j]
+            else:
+                j = j-(len(associations))
+                j = associations[j]
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
+    
         
