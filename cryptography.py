@@ -26,6 +26,15 @@ while again == "yes":
         message = input("Message: ")
         key = input("Key: ")
         messagelist = list(message)
+        goforstay = len(messagelist)
+        gofor = 0
+        for i in messagelist:
+            while gofor <= goforstay:
+                letternow = associations[gofor]
+                if letternow == i:
+                    i = gofor
+                gofor=gofor+1
+        print (messagelist)
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
