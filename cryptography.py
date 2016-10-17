@@ -34,7 +34,19 @@ while again == "yes":
                 if letternow == i:
                     i = gofor
                 gofor=gofor+1
-        print (messagelist)
+        goforkey = 0
+        goforkeystay = len(key)
+        listkey = list(key)
+        for b in listkey:
+            while goforkey <= goforkeystay:
+                keyletternow = associations[goforkey]
+                if keyletternow == b:
+                    b = goforkey
+                goforkey = goforkey + 1
+        for i in messagelist:
+            for b in listkey:
+                i = int(i) + int(b)
+        print 
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
