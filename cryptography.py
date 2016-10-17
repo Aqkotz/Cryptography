@@ -1,6 +1,6 @@
 """
 cryptography.py
-Author: <your name here>
+Author: Andy Kotz
 Credit: <list sources used, if any>
 
 Assignment:
@@ -10,3 +10,23 @@ Write and submit a program that encrypts and decrypts user data.
 See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptography/blob/master/README.md
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
+again = "yes"
+while again == "yes":
+    onoff = "on"
+    while onoff == "on":
+        modechoice = input("Enter e to encrypt, d to decrypt, or q to quit: ")
+        if modechoice not in ["e", "d", "q"]:
+            print ("Did not understand command, try again.")
+        else:
+            onoff = "off"
+            print ("Goodbye!")
+    if modechoice == "q":
+        again = "no"
+    elif modechoice == "e":
+        message = input("Message: ")
+        key = input("Key: ")
+        messagelist = list(message)
+    elif modechoice == "d":
+        message = input("Message: ")
+        key = input("Key: ")
+        
