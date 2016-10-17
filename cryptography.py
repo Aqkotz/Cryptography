@@ -21,10 +21,22 @@ while again == "yes":
             onoff = "off"
     if modechoice == "q":
         again = "no"
+        print ("Goodbye!")
     elif modechoice == "e":
         message = input("Message: ")
         key = input("Key: ")
         messagelist = list(message)
+        for i in messagelist:
+            i = associations.find(i)
+        print (messagelist)
+    elif modechoice == "d":
+        message = input("Message: ")
+        key = input("Key: ")
+    
+    
+    
+    """
+            messagelist = list(message)
         goforstay = len(messagelist)
         gofor = 0
         for i in messagelist:
@@ -48,8 +60,5 @@ while again == "yes":
         for j in messagelist:
             j = associations[(int(j))]
         print (messagelist)
-    elif modechoice == "d":
-        message = input("Message: ")
-        key = input("Key: ")
-    
+        """
         
