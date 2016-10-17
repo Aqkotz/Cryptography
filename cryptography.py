@@ -44,13 +44,10 @@ while again == "yes":
                 goforkey = goforkey + 1
         for i in messagelist:
             for b in listkey:
-                i = int(i) + int(b)
+                i = i + b
         for j in messagelist:
-            if j < len(associations):
-                j = associations[j]
-            else:
-                j = j-(len(associations))
-                j = associations[j]
+            j = associations[j]
+        print (messagelist)
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
