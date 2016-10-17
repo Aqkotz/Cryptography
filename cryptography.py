@@ -46,7 +46,7 @@ while again == "yes":
             for b in listkey:
                 i = i + b
         for j in messagelist:
-            j = associations[j]
+            j = associations[(int(j))]
         print (messagelist)
     elif modechoice == "d":
         message = input("Message: ")
