@@ -39,9 +39,14 @@ while again == "yes":
         for l in range(10):
             keylistnew = keylistnew + keylistnew
         messagelistfinal = []
-        for i in messagelistnew and b in keylistnew:
+        mixgofor = len(messagelistnew)
+        numberat = 0
+        while numberat < mixgofor:
+            i = messagelistnew[numberat]
+            b = keylistnew[numberat]
             new = i+b
             messagelistfinal.append(new)
+            numberat+=1
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
