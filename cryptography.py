@@ -1,7 +1,7 @@
 """
 cryptography.py
 Author: Andy Kotz
-Credit: <list sources used, if any>
+Credit: Kezar
 
 Assignment:
 
