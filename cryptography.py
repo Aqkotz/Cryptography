@@ -26,9 +26,22 @@ while again == "yes":
         message = input("Message: ")
         key = input("Key: ")
         messagelist = list(message)
+        messagelistnew = []
+        keylist = list(key)
+        keylistnew = []
         for i in messagelist:
-            i = associations.find(i)
-        print (messagelist)
+            x = associations.find(i)
+            messagelistnew.append(x)
+        print (messagelistnew)
+        for b in keylist:
+            j = associations.find(b)
+            keylistnew.append(j)
+        for l in range(10):
+            keylistnew = keylistnew + keylistnew
+        messagelistfinal = []
+        for i in messagelistnew and b in keylistnew:
+            new = i+b
+            messagelistfinal.append(new)
     elif modechoice == "d":
         message = input("Message: ")
         key = input("Key: ")
