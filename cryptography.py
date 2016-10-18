@@ -46,7 +46,7 @@ while again == "yes":
         messagelistfinal = []
         mixgofor = len(messagelistnew)
         numberat = 0
-        print (keylistnew)
+
         while numberat < mixgofor:
             i = messagelistnew[numberat]
             b = keylistnew[numberat]
@@ -65,8 +65,42 @@ while again == "yes":
         for i in newmessage:
             final = final + i
         print (final)
+        
+        
     elif modechoice == "d":
-        message = input("Message: ")
-        key = input("Key: ")
-    
-    
+        message = list(input("Message: "))
+        key = list(input("Key: "))
+        
+        messagenew = []
+        for i in message:
+            x = associations.find(i)
+            messagenew.append(x)
+        
+        keynew = []
+        for b in key:
+            j = associations.find(b)
+            keynew.append(j)
+        for l in range(10):
+            keynew = keynew + keynew
+            
+        messagefinal = []
+        mixgofor = len(messagenew)
+        numberat = 0
+
+        while numberat < mixgofor:
+            i = messagenew[numberat]
+            b = keynew[numberat]
+            new = i-b
+            messagefinal.append(new)
+            numberat+=1
+            
+        newmessaged = []
+        for x in messagefinal:
+            if x>len(associations):
+                x = x-len(associations)
+            newletter = associations[x]
+            newmessaged.append(newletter)
+        finald = ""
+        for i in newmessaged:
+            finald = finald + i
+        print (finald)
